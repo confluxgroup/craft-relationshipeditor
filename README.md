@@ -18,23 +18,23 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require /relationship-modifier
+        composer require /relationshipeditor
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Relationship Modifier.
 
-## Relationship Modifier Overview
+## Relationship Editor Overview
 
 -Insert text here-
 
-## Configuring Relationship Modifier
+## Configuring Relationship Editor
 
 -Insert text here-
 
-## Using Relationship Modifier
+## Using Relationship Editor
 
 -Insert text here-
 
-## Relationship Modifier Roadmap
+## Relationship Editor Roadmap
 
 Some things to do, and ideas for potential features:
 
