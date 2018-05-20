@@ -66,7 +66,9 @@ class SaveController extends Controller
                 break; 
             case Asset::class:
                 $this->_enforceEditAssetPermissions($element);
-                break;        
+                break;
+            default:
+                return;            
         }
 
         // store the current ids

@@ -26,13 +26,31 @@ To install the plugin, follow these instructions.
 
 -Insert text here-
 
-## Configuring Relationship Editor
-
--Insert text here-
-
 ## Using Relationship Editor
 
--Insert text here-
+```twig
+<form method="post" accept-charset="UTF-8">
+    {{ csrfInput() }}
+    <input type="hidden" name="action" value="relationshipeditor/save">
+    {{ redirectInput('path/to/redirect') }}
+    
+    {# the element containing the relationship you want to edit #}
+    <input type="hidden" name="elementId" value="{{ yourElement.id }}">
+    
+    {# the handle of the relationship field you want to edit #}
+    <input type="hidden" name="fieldHandle" value="relationshipFieldName">
+
+    {# use an addIds field or multiple fields to indicate elements
+    that should be added to the relationship #}
+    <input type="hidden" name="addIds" value="123">
+    
+    {# use an removeIds field or multiple fields to indicate elements
+    that should be removed from the relationship #}
+    <input type="hidden" name="removeIds" value="123">
+
+    <button type="submit">Submit</button>
+</form>
+```
 
 ## Relationship Editor Roadmap
 
