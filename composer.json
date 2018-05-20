@@ -1,0 +1,40 @@
+{
+    "name": "confluxgroup/craft-relationshipeditor",
+    "description": "Allows element relationships to be modified from the front-end without re-submitting all selections.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "relationship editor"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Conflux Group, Inc.",
+            "homepage": "https://confluxgroup.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "confluxgroup\\relationshipeditor\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Relationship Editor",
+        "handle": "relationshipeditor",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "confluxgroup\\relationshipeditor\\RelationshipEditor"
+    }
+}
