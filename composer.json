@@ -11,8 +11,8 @@
         "relationship editor"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/ConfluxGroup/craft-relationshipeditor/blob/master/README.md",
+        "issues": "https://github.com/ConfluxGroup/craft-relationshipeditor/issues"
     },
     "license": "MIT",
     "authors": [
@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0-RC1"
+        "craftcms/cms": "^3.0.0"
     },
     "autoload": {
         "psr-4": {
@@ -34,7 +34,7 @@
         "handle": "relationshipeditor",
         "hasCpSettings": false,
         "hasCpSection": false,
-        "changelogUrl": "???",
+        "changelogUrl": "https://github.com/ConfluxGroup/craft-relationshipeditor/blob/master/CHANGELOG.md",
         "class": "confluxgroup\\relationshipeditor\\RelationshipEditor"
     }
 }
