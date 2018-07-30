@@ -18,6 +18,7 @@ use craft\elements\Entry;
 use craft\elements\Category;
 use craft\elements\User;
 use craft\elements\Asset;
+use craft\web\Response;
 
 /**
  * Save Controller
@@ -89,6 +90,17 @@ class SaveController extends Controller
 
         // save the new array of ids
         Craft::$app->relations->saveRelations($field, $element, $newIds);
+
+        // return json if ajax request
+        if ($request->isAjax) {
+            Craft::$app->response->statusCode = 200;
+
+            $response = Craft::$app->response;
+            $response->format = Response::FORMAT_JSON;
+            $response->data = ['message' => 'Relationship updated.'];
+
+            return $response;
+        }
 
         // redirect
         $this->redirectToPostedUrl();
