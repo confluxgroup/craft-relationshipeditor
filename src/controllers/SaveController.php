@@ -97,7 +97,10 @@ class SaveController extends Controller
 
             $response = Craft::$app->response;
             $response->format = Response::FORMAT_JSON;
-            $response->data = ['message' => 'Relationship updated.'];
+            $response->data = [
+                'success' => true,
+                'message' => 'Relationship updated.'
+            ];
 
             return $response;
         }
