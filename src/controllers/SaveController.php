@@ -74,6 +74,9 @@ class SaveController extends Controller
 
         // store the current ids
         $currentIds = $element->{$field->handle}->ids();
+        
+        // instantiate new ids
+        $newIds = [];
 
         // Do we have IDs to add?
         if(!empty($addIds))
