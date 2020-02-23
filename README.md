@@ -26,7 +26,7 @@ You can also install Relationship Editor via the **Plugin Store** in the Craft C
 
 ## Relationship Editor Overview
 
-Craft CMS has powerful features to create and edit entries via frontend templates. However, editing element reltionship fields such as Entries, Users, Categories, and Tags fields can be tricky, since they will only save the related elements submitted in the request, so your frontend templates need to resubmit all of the previously-selected elements, making for more complicated frontend templates.
+Craft CMS has powerful features to create and edit entries via frontend templates. However, editing element reltionship fields such as Entries, Users, Categories, and Assets fields can be tricky, since they will only save the related elements submitted in the request, so your frontend templates need to resubmit all of the previously-selected elements, making for more complicated frontend templates.
 
 Relationship Editor provides a new action specifically for adding and removing elements from an element relationship field without having to resubmit all of the existing selections. 
 
