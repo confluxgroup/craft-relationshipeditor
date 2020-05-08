@@ -1,6 +1,6 @@
 <?php
 /**
- * Relationship Modifier plugin for Craft CMS 3.x
+ * Relationship Editor plugin for Craft CMS 3.x
  *
  * Allows element relationships to be modified from the front-end without re-submitting all selections.
  *
@@ -31,7 +31,7 @@ use yii\base\Event;
  * https://craftcms.com/docs/plugins/introduction
  *
  * @author    Conflux Group, Inc.
- * @package   RelationshipModifier
+ * @package   RelationshipEditor
  * @since     1.0.0
  *
  */
@@ -42,11 +42,16 @@ class RelationshipEditor extends Plugin
 
     /**
      * Static property that is an instance of this plugin class so that it can be accessed via
-     * RelationshipModifier::$plugin
+     * RelationshipEditor::$plugin
      *
-     * @var RelationshipModifier
+     * @var RelationshipEditor
      */
     public static $plugin;
+
+    /**
+     * @var bool
+     */
+    public static $craft30 = false;
 
     // Public Properties
     // =========================================================================
@@ -63,13 +68,15 @@ class RelationshipEditor extends Plugin
 
     /**
      * Set our $plugin static property to this class so that it can be accessed via
-     * RelationshipModifier::$plugin
+     * RelationshipEditor::$plugin
      *
      */
     public function init()
     {
         parent::init();
         self::$plugin = $this;
+
+         self::$craft30 = version_compare(Craft::$app->getVersion(), '3.1', '<=');
         
     }
 

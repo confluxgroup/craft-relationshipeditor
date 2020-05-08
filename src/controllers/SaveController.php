@@ -1,6 +1,6 @@
 <?php
 /**
- * Relationship Modifier plugin for Craft CMS 3.x
+ * Relationship Editor plugin for Craft CMS 3.x
  *
  * Allows element relationships to be modified from the front-end without re-submitting all selections.
  *
@@ -147,7 +147,16 @@ class SaveController extends Controller
      */
     private function _enforceEditEntryPermissions(craft\elements\Entry $entry)
     {
-        $permissionSuffix = ':'.$entry->sectionId;
+        
+        if(RelationshipEditor::$craft30)
+        {
+            $permissionSuffix = ':'.$entry->sectionId;
+        }
+        else
+        {
+            $permissionSuffix = ':'.$entry->getSection()->uid;
+        }
+
         $currentUser = Craft::$app->getUser()->getIdentity();
 
         // Require user to have permissions to edit this section
@@ -159,7 +168,7 @@ class SaveController extends Controller
             $entry->getSection()->type !== 'Single'
         ) {
             $this->requirePermission('editPeerEntries' . $permissionSuffix);
-            $this->requirePermission('publishPeerEntries:' . $permissionSuffix);
+            $this->requirePermission('publishPeerEntries' . $permissionSuffix);
         }
     }
 
